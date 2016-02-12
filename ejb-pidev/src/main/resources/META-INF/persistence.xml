@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="ejb-pidev">
+		<jta-data-source>java:/pidev</jta-data-source>
+		<class>edu.esprit.persistance.Admin</class>
+		<class>edu.esprit.persistance.AntidopingResp</class>
+		<class>edu.esprit.persistance.Bets</class>
+		<class>edu.esprit.persistance.Club</class>
+		<class>edu.esprit.persistance.Competition</class>
+		<class>edu.esprit.persistance.Doctor</class>
+		<class>edu.esprit.persistance.Event</class>
+		<class>edu.esprit.persistance.Fan</class>
+		<class>edu.esprit.persistance.Game</class>
+		<class>edu.esprit.persistance.GamePK</class>
+		<class>edu.esprit.persistance.Image</class>
+		<class>edu.esprit.persistance.Matchs</class>
+		<class>edu.esprit.persistance.Player</class>
+		<class>edu.esprit.persistance.Referee</class>
+		<class>edu.esprit.persistance.Test</class>
+		<class>edu.esprit.persistance.Ticket</class>
+		<class>edu.esprit.persistance.Trainingsession</class>
+		<class>edu.esprit.persistance.UpgradeContest</class>
+		<class>edu.esprit.persistance.User</class>
+		<class>edu.esprit.persistance.Staduim</class>
+		<properties>
+		
+			<property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+			<property name="hibernate.show_sql" value="true"/>
+			<property name="hibernate.format_sql" value="true"/>
+		</properties>
+	</persistence-unit>
+</persistence>
