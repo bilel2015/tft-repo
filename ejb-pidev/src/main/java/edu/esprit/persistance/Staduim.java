@@ -65,7 +65,7 @@ public class Staduim implements Serializable {
 	public void setTickets(List<Ticket> tickets) {
 		this.tickets = tickets;
 	}
-	@OneToMany(mappedBy="staduim")
+	@OneToMany(mappedBy="stadium")
 	public List<Matchs> getMatchs() {
 		return matchs;
 	}
