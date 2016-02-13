@@ -1,11 +1,16 @@
 package edu.esprit.persistance;
 
 import java.io.Serializable;
-import java.lang.Integer;
 import java.sql.Date;
 import java.util.List;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 /**
  * Entity implementation class for Entity: Matchs
@@ -20,17 +25,24 @@ public class Matchs implements Serializable {
 	private Date DateMatchs;
 	private static final long serialVersionUID = 1L;
 
-	
-
 	private Staduim stadium;
 
 	private Referee referee;
 
-	private List<Reservtion>reservations;
+	private List<Reservtion> reservations;
 
 	private Player player;
 	private Player player1;
-	
+	private Event event;
+
+	public Event getEvent() {
+		return event;
+	}
+
+	public void setEvent(Event event) {
+		this.event = event;
+	}
+
 	public Matchs() {
 		super();
 	}
@@ -44,8 +56,7 @@ public class Matchs implements Serializable {
 	public void setIdmatchs(Integer idmatchs) {
 		this.idmatchs = idmatchs;
 
-	}  
-
+	}
 
 	public Date getDateMatchs() {
 		return this.DateMatchs;
@@ -54,9 +65,6 @@ public class Matchs implements Serializable {
 	public void setDateMatchs(Date DateMatchs) {
 		this.DateMatchs = DateMatchs;
 	}
-	
-
-	
 
 	@ManyToOne
 	public Referee getReferee() {
@@ -66,10 +74,12 @@ public class Matchs implements Serializable {
 	public void setReferee(Referee referee) {
 		this.referee = referee;
 	}
-	@OneToMany(mappedBy="match")
+
+	@OneToMany(mappedBy = "match")
 	public List<Reservtion> getReservations() {
 		return reservations;
 	}
+
 	public void setReservations(List<Reservtion> reservations) {
 		this.reservations = reservations;
 	}
@@ -101,6 +111,7 @@ public class Matchs implements Serializable {
 	public void setPlayer(Player player) {
 		this.player = player;
 	}
+
 	@ManyToOne
 	public Player getPlayer1() {
 		return player1;
@@ -109,4 +120,4 @@ public class Matchs implements Serializable {
 	public void setPlayer1(Player player1) {
 		this.player1 = player1;
 	}
-	}
+}
