@@ -23,7 +23,7 @@ public class Staduim implements Serializable {
 	private Double capacity;
 	private String place;
 	private static final long serialVersionUID = 1L;
-	private List<Ticket>tickets;
+	
 	private List<Matchs>matchs;
 
 	public Staduim() {
@@ -58,14 +58,8 @@ public class Staduim implements Serializable {
 	public void setPlace(String place) {
 		this.place = place;
 	}
-	@OneToMany(mappedBy="staduim")
-	public List<Ticket> getTickets() {
-		return tickets;
-	}
-	public void setTickets(List<Ticket> tickets) {
-		this.tickets = tickets;
-	}
-	@OneToMany(mappedBy="staduim")
+	
+	@OneToMany(mappedBy="stadium")
 	public List<Matchs> getMatchs() {
 		return matchs;
 	}
