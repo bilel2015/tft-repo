@@ -59,7 +59,7 @@ public class Staduim implements Serializable {
 		this.place = place;
 	}
 	
-	@OneToMany(mappedBy="staduim")
+	@OneToMany(mappedBy="stadium")
 	public List<Matchs> getMatchs() {
 		return matchs;
 	}

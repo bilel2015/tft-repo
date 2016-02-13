@@ -19,21 +19,12 @@ public class Player extends User implements Serializable {
 	
 	private String type;
 	private String rank;
+	private List<Matchs> matchs;
 	private static final long serialVersionUID = 1L;
 
-	@OneToMany(mappedBy="player")
-	private List<Test> test;
-	
-	
-	@OneToMany
-	private List<Club> club;
-	
 	public Player() {
 		super();
 	}   
-	
-	
-	
 	public String getType() {
 		return this.type;
 	}
@@ -47,6 +38,14 @@ public class Player extends User implements Serializable {
 
 	public void setRank(String rank) {
 		this.rank = rank;
+	}
+	
+	@OneToMany(mappedBy="player")
+	public List<Matchs> getMatchs() {
+		return matchs;
+	}
+	public void setMatchs(List<Matchs> matchs) {
+		this.matchs = matchs;
 	}
    
 }
