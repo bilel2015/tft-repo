@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Date;
+
 import javax.persistence.*;
 
 /**
@@ -21,6 +23,24 @@ public class Club implements Serializable {
 	private Integer idclub;
 	private String Name;
 	private String NumberPlayer;
+	private String yearfounded;
+	private String address;
+ 	public String getYearfounded() {
+		return yearfounded;
+	}
+
+	public void setYearfounded(String yearfounded) {
+		this.yearfounded = yearfounded;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	private static final long serialVersionUID = 1L;
 
 	public Club() {
@@ -60,12 +80,17 @@ public class Club implements Serializable {
 		this.NumberPlayer = NumberPlayer;
 	}
 
-	public Club(String name, String numberPlayer, Player player) {
+	public Club(Integer idclub, String name, String numberPlayer, String yearfounded, String address, Player player) {
 		super();
+		this.idclub = idclub;
 		Name = name;
 		NumberPlayer = numberPlayer;
+		this.yearfounded = yearfounded;
+		this.address = address;
 		this.player = player;
 	}
+
+	
 	
    
 }

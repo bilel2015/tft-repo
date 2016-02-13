@@ -21,7 +21,7 @@ public class User implements Serializable {
 	private String Firstname;
 	private String Lastname;
 	private Date Dateofbirth;
-	private Double phone;
+	private String phone;
 	private String email;
 	private String login;
 	private String pwd;
@@ -60,11 +60,11 @@ public class User implements Serializable {
 	public void setDateofbirth(Date Dateofbirth) {
 		this.Dateofbirth = Dateofbirth;
 	}   
-	public Double getPhone() {
+	public String getPhone() {
 		return this.phone;
 	}
 
-	public void setPhone(Double phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}   
 	public String getEmail() {
