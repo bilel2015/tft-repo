@@ -20,10 +20,9 @@ public class Matchs implements Serializable {
 	private Integer idmatchs;
 	private Date DateMatchs;
 	private static final long serialVersionUID = 1L;
-	private List<Ticket> tickets;
 	private Staduim staduim;
 	private Referee referee;
-
+	private List<Reservtion>reservations;
 	public Matchs() {
 		super();
 	}   
@@ -35,7 +34,7 @@ public class Matchs implements Serializable {
 
 	public void setIdmatchs(Integer idmatchs) {
 		this.idmatchs = idmatchs;
-	}   
+	}  
 	public Date getDateMatchs() {
 		return this.DateMatchs;
 	}
@@ -44,14 +43,7 @@ public class Matchs implements Serializable {
 		this.DateMatchs = DateMatchs;
 	}
 	
-	@OneToMany(mappedBy="staduim")
 	
-	public List<Ticket> getTickets() {
-		return tickets;
-	}
-	public void setTickets(List<Ticket> tickets) {
-		this.tickets = tickets;
-	}
 	@ManyToOne
 	public Staduim getStaduim() {
 		return staduim;
@@ -66,6 +58,13 @@ public class Matchs implements Serializable {
 	}
 	public void setReferee(Referee referee) {
 		this.referee = referee;
+	}
+	@OneToMany(mappedBy="match")
+	public List<Reservtion> getReservations() {
+		return reservations;
+	}
+	public void setReservations(List<Reservtion> reservations) {
+		this.reservations = reservations;
 	}
    
 }
