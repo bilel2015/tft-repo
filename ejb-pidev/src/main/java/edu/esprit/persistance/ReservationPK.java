@@ -6,37 +6,32 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class ReservationPK implements Serializable{
+public class ReservationPK implements Serializable {
 
 	private Integer idFan;
 	private Integer idMatch;
-	
-	
+
 	public ReservationPK() {
 		super();
 	}
 
-     @Column(name="idFan")
+	@Column(name = "idFan")
 	public Integer getIdPlayer() {
 		return idFan;
 	}
-
 
 	public void setIdPlayer(Integer idPlayer) {
 		this.idFan = idFan;
 	}
 
-
-    @Column(name="idMatch")
+	@Column(name = "idMatch")
 	public Integer getIdMatch() {
 		return idMatch;
 	}
 
-
 	public void setIdMatch(Integer idMatch) {
 		this.idMatch = idMatch;
 	}
-
 
 	@Override
 	public int hashCode() {
@@ -46,7 +41,6 @@ public class ReservationPK implements Serializable{
 		result = prime * result + ((idFan == null) ? 0 : idFan.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {

@@ -1,31 +1,32 @@
 package edu.esprit.persistance;
 
 import java.io.Serializable;
-import java.lang.Double;
-import java.lang.Integer;
-import java.lang.String;
-import java.util.Date;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 /**
  * Entity implementation class for Entity: Club
  *
  */
 @Entity
-@Table(name="Club")
+@Table(name = "Club")
 
 public class Club implements Serializable {
 
-
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idclub;
 	private String Name;
 	private String NumberPlayer;
 	private String yearfounded;
 	private String address;
- 	public String getYearfounded() {
+
+	public String getYearfounded() {
 		return yearfounded;
 	}
 
@@ -45,11 +46,11 @@ public class Club implements Serializable {
 
 	public Club() {
 		super();
-	}   
-	
-	@ManyToOne	
+	}
+
+	@ManyToOne
 	private Player player;
-	
+
 	public Player getPlayer() {
 		return player;
 	}
@@ -64,14 +65,16 @@ public class Club implements Serializable {
 
 	public void setIdclub(Integer idclub) {
 		this.idclub = idclub;
-	}   
+	}
+
 	public String getName() {
 		return this.Name;
 	}
 
 	public void setName(String Name) {
 		this.Name = Name;
-	}   
+	}
+
 	public String getNumberPlayer() {
 		return this.NumberPlayer;
 	}
@@ -90,7 +93,4 @@ public class Club implements Serializable {
 		this.player = player;
 	}
 
-	
-	
-   
 }

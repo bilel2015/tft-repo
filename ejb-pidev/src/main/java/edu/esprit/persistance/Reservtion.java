@@ -89,7 +89,7 @@ public class Reservtion implements Serializable {
 		Price = price;
 		this.fan = fan;
 		this.match = match;
-		this.ReservationPK=new ReservationPK(fan.getIdUser(), match.getIdmatchs());
+		this.ReservationPK = new ReservationPK(fan.getIdUser(), match.getIdmatchs());
 	}
 
 }
