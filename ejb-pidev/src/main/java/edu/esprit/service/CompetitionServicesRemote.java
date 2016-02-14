@@ -16,5 +16,5 @@ public interface CompetitionServicesRemote {
 
 	public Competition findCompetitionById(Integer idcompetition);
 
-	public List<Competition> findAllCompetition();
+	public List<Competition> findAllCompetitions();
 }

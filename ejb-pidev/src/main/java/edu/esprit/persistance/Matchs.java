@@ -23,17 +23,16 @@ public class Matchs implements Serializable {
 
 	private Integer idmatchs;
 	private Date DateMatchs;
-	private static final long serialVersionUID = 1L;
-
 	private Staduim stadium;
-
 	private Referee referee;
-
 	private List<Reservtion> reservations;
-
 	private Player player;
 	private Player player1;
 	private Event event;
+	private Double ticketPrice;
+	private Double oddsPlayer1;
+	private Double oddsPlayer2;
+	private static final long serialVersionUID = 1L;
 
 	public Event getEvent() {
 		return event;
@@ -119,5 +118,29 @@ public class Matchs implements Serializable {
 
 	public void setPlayer1(Player player1) {
 		this.player1 = player1;
+	}
+
+	public Double getTicketPrice() {
+		return ticketPrice;
+	}
+
+	public void setTicketPrice(Double ticketPrice) {
+		this.ticketPrice = ticketPrice;
+	}
+
+	public Double getOddsPlayer1() {
+		return oddsPlayer1;
+	}
+
+	public void setOddsPlayer1(Double oddsPlayer1) {
+		this.oddsPlayer1 = oddsPlayer1;
+	}
+
+	public Double getOddsPlayer2() {
+		return oddsPlayer2;
+	}
+
+	public void setOddsPlayer2(Double oddsPlayer2) {
+		this.oddsPlayer2 = oddsPlayer2;
 	}
 }
